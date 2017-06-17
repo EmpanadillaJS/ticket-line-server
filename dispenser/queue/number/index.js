@@ -18,7 +18,7 @@ function init(app) {
       calls=[];
       let options={
             method: 'POST',
-            uri: 'http://ticket-line-dev.herokuapp.com/event/queuePosition/',
+            uri: 'http://ticket-line-dev.herokuapp.com/event/queuePosition/',//TODO obtener esto de una forma mas sensata que poniendo
             body: { length: auxCalls.length },
             json: true // Automatically stringifies the body to JSON
         };
@@ -29,7 +29,7 @@ function init(app) {
     }
   };
 
-  app.post('*/queue/number',  (request, response) => {console.log("ea");calls.push({request,response})});
+  app.post('*/queue/number',  (request, response) => calls.push({request,response}));
 
   setInterval(intervalFunction, 100);
 

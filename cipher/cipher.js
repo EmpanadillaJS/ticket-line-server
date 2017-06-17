@@ -18,7 +18,6 @@ function decrypt(text){
  
 
 function encryptToken(token){
-    console.log(token);
     let salt=[Math.random(),Math.random(),Math.random(),Math.random()];
     return encrypt(`${salt[0]}-${token.position}-${salt[0]}-${token.timeStamp}-${salt[0]}-${token.uid}-${salt[0]}`);
 }
