@@ -37,3 +37,12 @@ Aquí se transmite la informaci´n entre los nodos esclavos y el nodo maestro qu
 ### Mongo
 
 Aquí guardamos el secuencial
+
+## Arrancar proyecto
+
+npm i (Instalar dependencias)
+npm start (Lanza el servidor express)
+
+Si no se tiene mongo instalado en el equipo ejecutar:
+
+docker run --name local-mongo -p 27017:27017 -d mongo
