@@ -29,7 +29,7 @@ function init(app) {
     }
   };
 
-  app.post('*/queue/number/*',  (request, response) => {console.log("ea");calls.push({request,response})});
+  app.post('*/queue/number',  (request, response) => {console.log("ea");calls.push({request,response})});
 
   setInterval(intervalFunction, 100);
 
