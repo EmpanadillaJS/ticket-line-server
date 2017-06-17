@@ -41,6 +41,7 @@ Aquí guardamos el secuencial
 ## Arrancar proyecto
 
 npm i (Instalar dependencias)
+
 npm start (Lanza el servidor express)
 
 Si no se tiene mongo instalado en el equipo ejecutar:
