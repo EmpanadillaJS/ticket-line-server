@@ -1,7 +1,7 @@
 # ticket-line-server
 
 ## Token
-
+Se cifra
 [secuencial] - [timestamp] - [uuid] - [salt]
 
 ## API
