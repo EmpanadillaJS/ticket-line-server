@@ -15,7 +15,14 @@ Aquí se transmite la información entre los clientes (ordenadores), desde su ja
 
 ### API F/B
 Aquí se transmite la informaci´n entre los nodos esclavos y el nodo maestro que tiene los secuenciales.
+
 * Recibir numero de tokens a generar y devuelve secuencial inicio y secuencial de fin
+
+POST /queuePosition/
+  **Request**
+   { length: 5 }
+  **Response**
+   { startAt: 15, endAt: 19 }
 
 ### Mongo
 
