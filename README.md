@@ -19,7 +19,8 @@ Aquí se transmite la información entre los clientes (ordenadores), desde su ja
 
 * Ver el estado del token  
    GET /event/{id}/queue/number/{id}  
-   TODO
+  **Response**  
+   { position: 10000 }
 
 ### API F/B
 Aquí se transmite la informaci´n entre los nodos esclavos y el nodo maestro que tiene los secuenciales.
