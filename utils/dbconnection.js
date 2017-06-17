@@ -1,15 +1,19 @@
 const mongoose = require('mongoose');
+mongoose.Promise = Promise;
+require('../models/Events');
+const db = {
+	Event : mongoose.model('Event')
+};
 
-function connectDatabase(mongoDatabase) {
-  return new Promise((resolve, reject) => {
-    mongoose.connect(mongoDatabase, (err, res) => {
+const connectDatabase = mongoDatabaseUri => 
+  new Promise((resolve, reject) => 
+    mongoose.connect(mongoDatabaseUri, (err, res) => {
       if (err) {
         reject(err);
       }
-      resolve();
-    });
-  });
-}
+      resolve(db);
+    })
+  );
 
 
 module.exports = {

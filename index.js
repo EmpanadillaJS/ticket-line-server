@@ -7,7 +7,7 @@ const app = express();
 console.log('Starting app');
 
 const server = {
-  port: process.env.PORT || 4200,
+  port: parseInt(process.env.PORT || 4200),
   dispenser: !!process.env.TICKET_DISPENSER
 };
 
@@ -21,7 +21,7 @@ app.get('/info', (req, res) => {
 })
 
 app.listen(server.port, function() {
-  console.log('App listening on port ' + server.server_port);
+  console.log('App listening on port ' + server.port);
 });
 
 if (server.dispenser) {
