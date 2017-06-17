@@ -7,7 +7,7 @@ const app = express();
 console.log('Starting app'º);
 
 const server = {
-  port: process.env.OPENSHIFT_NODEJS_PORT || 4200,
+  port: process.env.PORT || 4200,
   ip_address: process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1',
   dispenser: !!process.env.TICKET_DISPENSER
 };
