@@ -10,15 +10,15 @@ Casos de uso en la API
 ### API Client
 Aquí se transmite la información entre los clientes (ordenadores), desde su javascript local hacia nuestro servicio.
 
-* Recuperar el token
-  POST event/{id}/queue/number
+* Recuperar el token  
+  POST event/{id}/queue/number  
   **Request**  
    { uuid: 'abcdefg' }  
   **Response**  
    { id: 'token' }  
 
-* Ver el estado del token
-   GET /event/{id}/queue/number/{id}
+* Ver el estado del token  
+   GET /event/{id}/queue/number/{id}  
    TODO
 
 ### API F/B
