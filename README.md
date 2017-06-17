@@ -20,13 +20,10 @@ Aquí se transmite la informaci´n entre los nodos esclavos y el nodo maestro qu
 
 POST /queuePosition/
 
-  **Request** 
-  
-   { length: 5 }
-   
-  **Response** 
-  
-   { startAt: 15, endAt: 19 }
+  **Request**  
+   { length: 5 }  
+  **Response**  
+   { startAt: 15, endAt: 19 }  
 
 ### Mongo
 
