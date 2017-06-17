@@ -11,8 +11,8 @@ app.listen(server_port, server_ip_address, function() {
 });
 
 if (server_dispenser) {
-  require('dispenser/index')(app);
+  require('./dispenser/index')(app);
 } else {
-  require('ticket-roll/index')(app);
+  require('./ticket-roll/index')(app);
 }
 
