@@ -2,7 +2,7 @@ let mongoDatabase;
 
 switch (process.env.NODE_ENV) {
   case 'production':
-    mongoDatabase = 'mongodb://localhost/test';
+    mongoDatabase = process.env.MONGO_DATABASE;
     break;
   default:
     mongoDatabase = 'mongodb://localhost/test';
