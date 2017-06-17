@@ -2,7 +2,7 @@
 
 ## Token
 Se cifra
-[secuencial] - [timestamp] - [uuid] - [salt]
+[secuencial] - [salt] - [timestamp] - [uuid]
 
 ## API
 Casos de uso en la API
