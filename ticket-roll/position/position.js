@@ -15,7 +15,6 @@ function init(app) {
   //     throw error;
   //   });
 
-
   app.post('*/queuePosition/*',  (req, res) => {
     let startAt = position ++;
     let endAt = position += req.body.length;

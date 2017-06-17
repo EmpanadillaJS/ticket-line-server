@@ -14,6 +14,13 @@ const server = {
 
 app.use(bodyParser.json());
 
+app.get('/info', (req, res) => {
+  res.json({
+    "ticketDispenser": server.dispenser,
+    "ticketRoll": !server.dispenser
+  }).end();
+})
+
 app.listen(server.port, function() {
   console.log('App listening on port ' + server.server_port);
 });
