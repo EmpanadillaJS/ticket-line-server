@@ -15,4 +15,3 @@ if (server_dispenser) {
 } else {
   require('./ticket-roll/index')(app);
 }
-
