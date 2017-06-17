@@ -11,7 +11,8 @@
             "program": "${workspaceRoot}/index.js",
             "cwd": "${workspaceRoot}",
             "env":{
-                "TICKET_DISPENSER":"true"
+                "TICKET_DISPENSER":"true",
+                "PORT": 8080
             }
         },
         {
