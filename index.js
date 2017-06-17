@@ -12,7 +12,7 @@ const server = {
 
 app.use(bodyParser.json());
 
-app.listen(server.port, server.ip_address, function() {
+app.listen(server.port, function() {
   console.log('App listening on port ' + server.server_port);
 });
 
