@@ -5,7 +5,7 @@ const enviromentVars = require('./../../utils/enviroment.js');
 
 function init(app) {
 
-  let position = 0;
+  var position = 0;
 
   // dbconnection.connectDatabase(enviromentVars.mongoDatabase)
   //   .then(() => {
@@ -16,9 +16,14 @@ function init(app) {
   //   });
 
   app.post('*/queuePosition/*',  (req, res) => {
-    let startAt = position ++;
-    let endAt = position += req.body.length;
+    let startAt = position;
+    let endAt = position;
 
+    if(req.body.length){
+      startAt = position++;
+      endAt = position += req.body.length;
+    }
+    
     res.json({ 
       startAt,
       endAt
