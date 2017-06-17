@@ -1,16 +1,26 @@
-var express = require('express');
-var app = express();
+const express = require('express');
 
-var server_port = process.env.OPENSHIFT_NODEJS_PORT || 4200;
-var server_ip_address = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1';
+const app = express();
 
-var server_dispenser = !!process.env.TICKET_DISPENSER;
+const morgan = require('morgan');
 
-app.listen(server_port, server_ip_address, function() {
-  console.log('App listening on port ' + server_port);
+const server = {
+  port: process.env.OPENSHIFT_NODEJS_PORT || 4200,
+  ip_address: process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1',
+  dispenser: !!process.env.TICKET_DISPENSER
+};
+
+// Uses morgan logger
+app.use(morgan('combined'));
+
+app.listen(server.port, server.ip_address, (error) => {
+  if (error) {
+    throw error;
+  }
+  console.log('App listening on port ' + server.port);
 });
 
-if (server_dispenser) {
+if (server.dispenser) {
   require('./dispenser/index')(app);
 } else {
   require('./ticket-roll/index')(app);
