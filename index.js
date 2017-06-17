@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 
 const app = express();
 
-console.log('Starting app'º);
+console.log('Starting app');
 
 const server = {
   port: process.env.PORT || 4200,
