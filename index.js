@@ -1,7 +1,10 @@
+
 const express = require('express');
-const morgan = require('morgan');
 const dbconnection = require('./utils/dbconnection.js');
 const enviromentVars = require('./utils/enviroment.js');
+var express = require('express');
+var bodyParser = require('body-parser');
+var app = express();
 
 const app = express();
 
@@ -11,9 +14,11 @@ const server = {
   dispenser: !!process.env.TICKET_DISPENSER
 };
 
-// Uses morgan logger
-app.use(morgan('combined'));
+app.use(bodyParser.json());
 
+app.listen(server_port, server_ip_address, function() {
+  console.log('App listening on port ' + server_port);
+});
 
 // connect database before launch express
 dbconnection.connectDatabase(enviromentVars.mongoDatabase)
